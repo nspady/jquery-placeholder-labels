@@ -8,29 +8,28 @@ Setup
 Required componenets for the plugin to function
 
 ### CSS
-`/* Class added to placeholder text on focus */
-.input-selected {
-	color: #aaa !important;
+	/* Class added to placeholder text on focus */
+	.input-selected {
+		color: #aaa !important;
 	}
 
-/* Styling of the placeholder */
-.placeholder span {
-  position: absolute;
-  padding: 5px; /* Set to match your input styling */
-  color: #999; /* Color of the placeholder text */
-  }`
+	/* Styling of the placeholder */
+	.placeholder span {
+		position: absolute;
+		padding: 5px; /* Set to match your input styling */
+		color: #999; /* Color of the placeholder text */
+	}
 
 ### JS
 Include after jQuery is loaded
-`$( function() {
-    add_placeholders();
+	$( function() {
+		add_placeholders();
 	});
-`
 
 ### Example label and text area
-`<input type="text" name="name" placeholder="e.g. John Smith"></label>`
+	<input type="text" name="name" placeholder="e.g. John Smith">
 
-`<textarea name="comment" placeholder="Your comment goes here"></textarea>`
+	<textarea name="comment" placeholder="Your comment goes here"></textarea>
 
 
 Browser support
