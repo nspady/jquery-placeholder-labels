@@ -22,6 +22,7 @@ Required componenets for the plugin to function
 
 ### JS
 Include after jQuery is loaded
+
 	$( function() {
 		add_placeholders();
 	});
