@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <title>HTML5 jQuery Placeholder Label Plugin</title>
+  <style>
+   body, input, textarea { font: 1em/1.4 Helvetica, Arial; }
+   input { width: 10em; }
+   p { margin-left: 20px; }
+   textarea { height: 5em; width: 20em; }
+   .input-selected {
+    color: #aaa !important;
+   }
+
+   .placeholder span {
+    position: absolute;
+    padding: 5px;
+    color: #999;
+   }
+  </style>
+ </head>
+ <body>
+  <h1>HTML5 jQuery Placeholder Label Plugin</h1>
+  <form>
+    <p>
+      <input id="testID" type="text" name="name" placeholder="e.g. John Smith">
+    </p>
+    <p>
+      <input type="email" name="email" placeholder="e.g. email@yoyo.com">
+    </p>
+    <p>
+      <input type="password" name="password" placeholder="e.g. hunter2" id="p">
+    </p>
+    <p>
+      <textarea name="comment" placeholder="Your comment goes here"></textarea>
+    </p>
+  </form>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
+  <script src="placeholder-labels.js"></script>
+  <script> 
+    $( function() {
+      add_placeholders();
+    });
+  </script>
+ </body>
+</html>
