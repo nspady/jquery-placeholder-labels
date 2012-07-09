@@ -2,7 +2,7 @@
   $.fn.placeholder_labels = function() {
     // encapsulate our variables into their own scope
     // test if HTML5 placeholder is supported; if so, quit
-    if ('placeholder' in document.createElement('input')) {
+    if ('placeholder' in document.createelement('input')) {
       return ;
     }
 
