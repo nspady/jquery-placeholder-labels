@@ -24,7 +24,7 @@ Required componenets for the plugin to function
 Include after jQuery is loaded
 
 	$( function() {
-		add_placeholders();
+		$("input[placeholder], textarea[placeholder]").placeholder_labels();
 	});
 
 ### Example label and text area
