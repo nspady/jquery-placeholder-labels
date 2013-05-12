@@ -1,8 +1,15 @@
+/* Author: Nathan Spady
+ *
+ * Add placeholder attribute support for older browsers such as IE 7-9
+ * 
+ * https://github.com/nspady/jquery-placeholder-labels
+ */
+
 ( function( $ ) {
   $.fn.placeholder_labels = function() {
     // encapsulate our variables into their own scope
     // test if HTML5 placeholder is supported; if so, quit
-    if ('placeholder' in document.createelement('input')) {
+    if ('placeholder' in document.createElement('input')) {
       return ;
     }
 
@@ -12,19 +19,19 @@
     this.each(function(){
       var $input = $( this );
       var placeholder_text = $input.attr( 'placeholder' );
-  
+
       // create a label and a span within it
       var $label = $( '<label class="placeholder"></label>' );
       var $span = $( '<span>' + placeholder_text + '</span>' );
       $span.appendTo( $label );
-  
+
       // the label surrounds the input
       $label.insertBefore( $input ).append( $input );
-  
+
       // try getting the input's size
       var w = $input.width(),
           h = $input.height();
-  
+
       // test for the case of the input being hidden
       if ( !w || !h ) {
         // get dimensions by cloning the input and grabbing height and width
@@ -33,14 +40,14 @@
           visibility : 'hidden',
           display : 'block'
         });
-  
+
         // fetch the correct size (hopefully)
         w = $clone.width();
         h = $clone.height();
-  
+
         $clone.remove();
       }
- 
+
       // if the input is hidden or shown, so should the placeholder be
       $input.bind('hide', function() {
         $span.hide();
@@ -52,14 +59,14 @@
           height:$input.height()+'px'
         });
       });
- 
+
       /* If the input is starting out hidden or there is a default value in
        * the input already, hide the placeholder
        */
       if ( !$input.is(':visible') || $input.val().length ) {
         $span.hide();
       }
- 
+
       /* Show the placeholder untill a key is pressed in the field
        * restore the placeholder if the field is blank.
        */
@@ -77,7 +84,7 @@
         .blur( function() {
           $span.removeClass( "input-selected" );
         });
- 
+
       // If the placeholder is focused, send focus to the input
       $span.focus( function() {
         $input.focus();
@@ -90,7 +97,7 @@
       this.trigger('hide');
       return hide.apply(this, arguments);
     };
- 
+
     // override jQuery.show() to trigger the 'show' event
     var show = $.fn.show;
     $.fn.show = function() {
