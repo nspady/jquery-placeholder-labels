@@ -1,30 +1,27 @@
 jquery-placeholder-labels
 =========================
 
-A jQuery plugin to mimic Chrome and Safari's handeling of the placeholder for unsupported browsers. The plugin functions by adding a label element on top of the input element. This way the placeholder text remains visable untill a character is entered.
+A jQuery plugin to mimic Chrome, Firefox and Safari's handeling of the placeholder for unsupported browsers. The plugin functions by adding a label element on top of the input element. This way the placeholder text remains visable until a character is entered.
 
 Setup
 -----
 Required componenets for the plugin to function
-
-### CSS
-	/* Class added to placeholder text on focus */
-	.input-selected {
-		color: #aaa !important;
-	}
-
-	/* Styling of the placeholder */
-	.placeholder span {
-		position: absolute;
-		padding: 5px; /* Set to match your input styling */
-		color: #999; /* Color of the placeholder text */
-	}
 
 ### JS
 Include after jQuery is loaded
 
 	$( function() {
 		$("input[placeholder], textarea[placeholder]").placeholder_labels();
+	});
+	
+### Options
+
+	$( function() {
+		$("input[placeholder], textarea[placeholder]").placeholder_labels({
+			blurColor  : '#aaa', //The color of the placeholder text when not in focus. Default: '#aaa'
+			focusColor : '#bbb', //The color of the placeholder text when in focus. Default: '#bbb'
+			labelClass : 'placeholder-lable' //Class added to the label which wraps the placeholder span
+		});
 	});
 
 ### Example label and text area
@@ -36,6 +33,6 @@ Include after jQuery is loaded
 Browser support
 ---------------
 Tested successfully on:
-IE 7, 8, and 9
+IE 8+
 
 
