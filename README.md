@@ -1,7 +1,7 @@
-jquery-placeholder-labels
+Consistent cross browser support for HTML5 Placeholders
 =========================
 
-A jQuery plugin to mimic Chrome, Firefox and Safari's handeling of the placeholder for unsupported browsers. The plugin functions by adding a label element on top of the input element. This way the placeholder text remains visable until a character is entered.
+A jQuery plugin to mimic Chrome, Firefox and Safari's handeling of the placeholder for unsupported browsers. It will keep the placeholder visible until text is entered into the input or textarea. The plugin functions by adding a parent label element for the input element.
 
 Setup
 -----
