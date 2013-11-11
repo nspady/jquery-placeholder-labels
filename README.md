@@ -5,7 +5,7 @@ A jQuery plugin to mimic Chrome, Firefox and Safari's handeling of the placehold
 
 Setup
 -----
-Required componenets for the plugin to function
+Required componenets for the plugin to function.
 
 ### JS
 Include after jQuery is loaded
@@ -20,14 +20,14 @@ Include after jQuery is loaded
 		$("input[placeholder], textarea[placeholder]").placeholder_labels({
 			blurColor  : '#aaa', //The color of the placeholder text when not in focus. Default: '#aaa'
 			focusColor : '#bbb', //The color of the placeholder text when in focus. Default: '#bbb'
-			labelClass : 'placeholder-lable' //Class added to the label which wraps the placeholder span
+			labelClass : 'placeholder-label' //Class added to the label which wraps the placeholder span and input
 		});
 	});
 
 ### Example label and text area
 	<input type="text" name="name" placeholder="e.g. John Smith">
 
-	<textarea name="comment" placeholder="Your comment goes here"></textarea>
+	<textarea name="comment" placeholder="Leave your comment here."></textarea>
 
 
 Browser support
