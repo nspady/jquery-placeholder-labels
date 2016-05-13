@@ -8,7 +8,7 @@
 
 ( function( $ ) {
   var IE10 = !!(navigator && navigator.userAgent && navigator.userAgent.match('MSIE 10'));
-  var IE11 = !!(navigator && navigator.userAgent && navigator.userAgent.match('MSIE 11'));
+  var IE11 = !!(navigator && navigator.userAgent && navigator.userAgent.match('Gecko'));
   var overridePlaceholder = (IE10 || IE11);
 
   $.fn.placeholder_labels = function(options) {
