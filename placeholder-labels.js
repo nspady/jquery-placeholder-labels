@@ -142,6 +142,11 @@
       $span.focus( function() {
         $input.focus();
       });
+      
+      // If autofocus, refocus input
+      if($input.attr("autofocus")){
+          $input.focus();
+      }
     });
 
     // override jQuery.hide() to trigger the 'hide' event
