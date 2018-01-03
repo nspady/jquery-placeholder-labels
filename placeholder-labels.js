@@ -8,7 +8,7 @@
 
 ( function( $ ) {
   var IE10 = !!(navigator && navigator.userAgent && navigator.userAgent.match('MSIE 10'));
-  var IE11 = !!(navigator && navigator.userAgent && navigator.userAgent.match('MSIE 11'));
+  var IE11 = !!(navigator && navigator.userAgent && navigator.userAgent.match(/Trident.*rv\:11\./));
   var overridePlaceholder = (IE10 || IE11);
 
   $.fn.placeholder_labels = function(options) {
@@ -142,6 +142,11 @@
       $span.focus( function() {
         $input.focus();
       });
+      
+      // If autofocus, refocus input
+      if($input.attr("autofocus")){
+          $input.focus();
+      }
     });
 
     // override jQuery.hide() to trigger the 'hide' event
